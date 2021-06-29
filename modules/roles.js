@@ -85,7 +85,6 @@ var methods = {
             }
 
             const collector = msg.createReactionCollector(filter, {max: reactions.length, time:60000, errors: ["time"] });
-
             collector.on("collect", (reaction, reactionCollector) => {
                 console.log("Reaction collected");
                 for (i in skill) {
@@ -99,7 +98,7 @@ var methods = {
                         } else {
                             message.member.roles.add(roleID);
                             messagesSent++;
-                            message.channel.send("You now have this role :thumb_up:").then(msg => {
+                            message.channel.send("You now have this role :thumbsup:").then(msg => {
                                 msg.delete({ timeout: 10000 });
                             });
                         }
@@ -234,7 +233,6 @@ var methods = {
             }
 
             const collector = msg.createReactionCollector(filter, {max: reactions.length, time:60000, errors: ["time"] });
-
             collector.on("collect", (reaction, reactionCollector) => {
                 console.log("Reaction collected");
                 for (i in region) {
@@ -248,7 +246,7 @@ var methods = {
                         } else {
                             message.member.roles.add(roleID);
                             messagesSent++;
-                            message.channel.send("You now have this role :thumb_up:").then(msg => {
+                            message.channel.send("You now have this role :thumbsup:").then(msg => {
                                 msg.delete({ timeout: 10000 });
                             });
                         }
