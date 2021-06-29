@@ -142,6 +142,23 @@ var methods = {
         });
     },
 
+    selfRemoveRole : function(message) {
+        var args = message.content.slice(config.prefix.length).trim().split(/ +/g);
+        if (args.length > 2) {
+            message.channel.send("To remove one of your roles please type !srrole {name of role in !sskill or !sregion}");
+        }
+
+        var role = args[1];
+        let roleID = getRoleFromMention(role);
+        if (message.member.roles.cache.has(roleID)) {
+            message.member.roles.remove(roleID);
+            message.channel.send("Your role have been removed")
+        } else {
+            message.channel.send("You don't have this role")
+        }
+
+    },
+
     rolesHelp : function(message) {
         message.channel.send(`Hey to use the roles commands type it as follow (only the person entering the command can use get roles) :\n
         ${prefix}sskill to have an overview of all the Skill levels available as roles\n
@@ -152,7 +169,9 @@ var methods = {
         ${prefix}sregion to have an overview of all the regions available as roles\n
         ${prefix}aregion to add a new role to the pool (Mod ONLY)\n
         ${prefix}rregion to remove a role (Mod ONLY)\n
-        ${prefix}jregion to add yourself the roles you want :love_you_gesture:`);
+        ${prefix}jregion to add yourself the roles you want :love_you_gesture:\n
+        -------------------------\n
+        ${prefix}srrole to remove one of your roles`);
     },
 
     showCurrentRegion : function(message) {

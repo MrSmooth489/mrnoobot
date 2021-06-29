@@ -83,6 +83,9 @@ bot.on("message", async message => {
             roles.data.joinRegion(bot, message);
             break;
 
+        case "srrole":
+            roles.data.selfRemoveRole(message);
+
         default:
             return;
     }
