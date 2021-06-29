@@ -1,5 +1,6 @@
 var config = require("../config.json");
 var skill = config.skill;
+let prefix = config.prefix;
 let region = config.region;
 const updateJsonFile = require("update-json-file");
 
