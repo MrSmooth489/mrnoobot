@@ -1,0 +1,27 @@
+{
+  "name": "mrnoobot",
+  "version": "1.0.0",
+  "description": "Just a discord bot",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MrSmooth489/mrnoobot.git"
+  },
+  "keywords": [
+    "Discord",
+    "bot"
+  ],
+  "author": "MrSmooth#8524",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MrSmooth489/mrnoobot/issues"
+  },
+  "homepage": "https://github.com/MrSmooth489/mrnoobot#readme",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "update-json-file": "^1.1.1"
+  }
+}
