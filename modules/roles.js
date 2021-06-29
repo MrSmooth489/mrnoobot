@@ -143,7 +143,7 @@ var methods = {
     },
 
     rolesHelp : function(message) {
-        message.channel.send(`Hey to use the roles commands type it as follow :\n
+        message.channel.send(`Hey to use the roles commands type it as follow (only the person entering the command can use get roles) :\n
         ${prefix}sskill to have an overview of all the Skill levels available as roles\n
         ${prefix}askill to add a new role to the pool (Mod ONLY)\n
         ${prefix}rskill to remove a role (Mod ONLY)\n
