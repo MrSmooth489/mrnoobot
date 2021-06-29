@@ -1,9 +1,11 @@
+// Imports
 var config = require("../config.json");
 var skill = config.skill;
 let prefix = config.prefix;
 let region = config.region;
 const updateJsonFile = require("update-json-file");
 
+// Exported Methods
 var methods = {
     showCurrentSkill : function(message) {
         var tabRole = JSON.parse(JSON.stringify(skill));
@@ -266,7 +268,7 @@ var methods = {
         })
     },
 
-    removeregion : function(message) {
+    removeRegion : function(message) {
         var args = message.content.slice(config.prefix.length).trim().split(/ +/g);
         if (args.length > 2) {
             message.channel.send("To remove a role of the pool please type !rregion {name of role in !sregion}");
@@ -290,6 +292,7 @@ var methods = {
 
 }
 
+// Method to strip role id and check if it's a role or user id
 function getRoleFromMention(mention) {
 
     if (mention.startsWith("<@&") && mention.endsWith(">")) {
@@ -304,4 +307,5 @@ function getRoleFromMention(mention) {
 
 }
 
+// Methods export
 exports.data = methods;
