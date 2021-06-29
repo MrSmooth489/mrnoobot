@@ -208,7 +208,7 @@ var methods = {
         message.channel.send("Region is now available !");
     },
 
-    joinregion : async function (bot, message) {
+    joinRegion : async function (bot, message) {
         var messagesSent = 0;
 
         if (region.length == 0 ) {
